@@ -86,6 +86,7 @@ const produkcje = [
 export default function Produkcje() {
   return (
     <section className="py-24 px-6 md:px-16 border-b border-gray-100">
+      <h1>Moja działalność</h1>
       <h2 className="text-xs text-gray-400 uppercase tracking-widest mb-10">Moje produkcje</h2>
       <div className="flex flex-col gap-12">
         {produkcje.map((grupa) => (

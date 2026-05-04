@@ -8,6 +8,12 @@ export default function Kontakt() {
       >
         michal.kedzia@icloud.com
       </a>
+        <a
+            href="tel:+48514198824"
+            className="text-2xl md:text-4xl font-light text-black hover:text-gray-400"
+        >
+            +48 514 198 824
+        </a>
     </section>
   );
 }
