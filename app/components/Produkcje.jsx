@@ -1,3 +1,24 @@
+function getYoutubeThumbnail(url) {
+  let id = null;
+  try {
+    const u = new URL(url);
+    if (u.hostname === "youtu.be") {
+      id = u.pathname.slice(1);
+    } else if (u.hostname.includes("youtube.com")) {
+      if (u.pathname.startsWith("/shorts/")) {
+        id = u.pathname.split("/shorts/")[1];
+      } else if (u.pathname.startsWith("/live/")) {
+        id = u.pathname.split("/live/")[1];
+      } else {
+        id = u.searchParams.get("v");
+      }
+    }
+  } catch {
+    return null;
+  }
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : null;
+}
+
 const produkcje = [
   {
     kategoria: "Wywiady",
@@ -43,6 +64,7 @@ const produkcje = [
       {
         title: "Rolka TikTok",
         url: "https://vm.tiktok.com/ZNRgmVTEd/",
+        thumbnail: "/thumbnails/tiktok-rolka.jpg",
       },
     ],
   },
@@ -72,20 +94,40 @@ export default function Produkcje() {
               {grupa.kategoria}
             </h3>
             <div className="divide-y divide-gray-100">
-              {grupa.items.map((item) => (
-                <a
-                  key={item.url}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex justify-between items-center py-4 hover:text-gray-400 group"
-                >
-                  <span className="text-base font-light text-black group-hover:text-gray-400">
-                    {item.title}
-                  </span>
-                  <span className="text-xs text-gray-300 ml-4 shrink-0">↗</span>
-                </a>
-              ))}
+              {grupa.items.map((item) => {
+                const thumb = item.thumbnail || getYoutubeThumbnail(item.url);
+                return (
+                  <a
+                    key={item.url}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 py-4 hover:text-gray-400 group"
+                  >
+                    {thumb && (
+                      <div className="relative w-32 h-18 shrink-0 rounded overflow-hidden bg-gray-100">
+                        <img
+                          src={thumb}
+                          alt={item.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
+                          <svg
+                            className="w-8 h-8 text-white opacity-80 drop-shadow"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
+                    <span className="flex-1 text-base font-light text-black group-hover:text-gray-400">
+                      {item.title}
+                    </span>
+                  </a>
+                );
+              })}
             </div>
           </div>
         ))}
