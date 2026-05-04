@@ -2,19 +2,19 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-between px-6 md:px-16 border-b border-gray-100">
-      <div>
-        <p className="text-sm text-gray-400 mb-4 uppercase tracking-widest">Video Editor & Producent</p>
-        <h1 className="text-6xl md:text-8xl font-light text-black leading-none tracking-tight">
-          Michał<br />Kędzia
-        </h1>
-      </div>
-      <div className="hidden md:block">
+    <section className="my-16 sm:my-24 glass-card rounded-3xl py-12 sm:py-16 px-6 sm:px-10 text-center">
+      <p className="text-sm text-gray-400 mb-4 uppercase tracking-widest">
+        Video Editor & Producent
+      </p>
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-light text-gray-900 leading-none tracking-tight">
+        Michał Kędzia
+      </h1>
+      <div className="mt-8 flex justify-center">
         <Image
           src="/michaleek.png"
           alt="Michał Kędzia"
-          width={400}
-          height={400}
+          width={280}
+          height={280}
           className="object-cover rounded-2xl"
           priority
         />
