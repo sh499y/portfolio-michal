@@ -55,19 +55,19 @@ const produkcje = [
 export default function Produkcje() {
   return (
     <section className="my-16 sm:my-24 glass-card rounded-3xl py-12 sm:py-16 px-6 sm:px-10">
-      <h1 className="text-2xl sm:text-3xl font-light text-gray-900 text-center mb-1">
-        Moja dzia\u0142alno\u015b\u0107
+      <h1 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-1">
+        Moja działalność
       </h1>
-      <h2 className="text-sm text-gray-400 uppercase tracking-widest mb-10 text-center">
+      <h2 className="text-sm text-white/50 uppercase tracking-widest mb-10 text-center font-medium">
         Moje produkcje
       </h2>
       <div className="flex flex-col gap-10">
         {produkcje.map((grupa) => (
           <div key={grupa.kategoria}>
-            <h3 className="text-xs text-gray-400 uppercase tracking-widest mb-4">
+            <h3 className="text-xs text-white/40 uppercase tracking-widest mb-4 font-medium">
               {grupa.kategoria}
             </h3>
-            <div className="divide-y divide-gray-200/50">
+            <div className="divide-y divide-white/10">
               {grupa.items.map((item) => {
                 const thumb = item.thumbnail || getYoutubeThumbnail(item.url);
                 return (
@@ -76,10 +76,10 @@ export default function Produkcje() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 py-4 group rounded-xl px-3 -mx-3 hover:bg-white/40"
+                    className="flex items-center gap-4 py-4 group rounded-xl px-3 -mx-3 hover:bg-white/10"
                   >
                     {thumb && (
-                      <div className="relative w-32 h-18 shrink-0 rounded-xl overflow-hidden bg-gray-100/50">
+                      <div className="relative w-32 h-18 shrink-0 rounded-xl overflow-hidden bg-white/5">
                         <img
                           src={thumb}
                           alt={item.title}
@@ -92,7 +92,7 @@ export default function Produkcje() {
                         </div>
                       </div>
                     )}
-                    <span className="flex-1 text-base font-light text-gray-800 group-hover:text-gray-500">
+                    <span className="flex-1 text-base font-normal text-white/90 group-hover:text-white">
                       {item.title}
                     </span>
                   </a>

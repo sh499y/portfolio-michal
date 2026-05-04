@@ -5,30 +5,30 @@ import Grainient from '../../components/Grainient';
 export default function Background() {
   return (
     <div className="fixed inset-0 -z-10 w-full h-full">
-      <Grainient
-        color1="#0b778a"
-        color2="#5227FF"
-        color3="#1c2b3b"
-        timeSpeed={1.05}
-        colorBalance={0}
-        warpStrength={1}
-        warpFrequency={5}
-        warpSpeed={2}
-        warpAmplitude={50}
-        blendAngle={0}
-        blendSoftness={0.05}
-        rotationAmount={500}
-        noiseScale={2}
-        grainAmount={0.1}
-        grainScale={2}
-        grainAnimated={false}
-        contrast={1.5}
-        gamma={1}
-        saturation={1}
-        centerX={0}
-        centerY={0}
-        zoom={0.9}
-      />
+        <Grainient
+            color1="#0b7586"
+            color2="#09091a"
+            color3="#1c2b3b"
+            timeSpeed={0.85}
+            colorBalance={0}
+            warpStrength={3.2}
+            warpFrequency={5}
+            warpSpeed={2}
+            warpAmplitude={32}
+            blendAngle={0}
+            blendSoftness={0.05}
+            rotationAmount={440}
+            noiseScale={2.55}
+            grainAmount={0.1}
+            grainScale={3.1}
+            grainAnimated={false}
+            contrast={1.5}
+            gamma={1.2}
+            saturation={1}
+            centerX={0}
+            centerY={0.3}
+            zoom={0.95}
+        />
     </div>
   );
 }
