@@ -55,16 +55,16 @@ const produkcje = [
 export default function Produkcje() {
   return (
     <section className="my-16 sm:my-24 glass-card rounded-3xl py-12 sm:py-16 px-6 sm:px-10">
-      <h1 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-1">
+      <h1 className="text-4xl font-semibold text-white text-center mb-2 uppercase">
         Moja działalność
       </h1>
-      <h2 className="text-sm text-white/50 uppercase tracking-widest mb-10 text-center font-medium">
+      <h2 className="text-2xl text-white/75 uppercase tracking-widest mb-10 text-center font-medium">
         Moje produkcje
       </h2>
       <div className="flex flex-col gap-10">
         {produkcje.map((grupa) => (
           <div key={grupa.kategoria}>
-            <h3 className="text-xs text-white/40 uppercase tracking-widest mb-4 font-medium">
+            <h3 className="text-xl text-white/85 uppercase tracking-widest mb-4 font-medium">
               {grupa.kategoria}
             </h3>
             <div className="divide-y divide-white/10">

@@ -1,9 +1,9 @@
 export default function Kontakt() {
   return (
     <section className="my-16 sm:my-24 glass-card rounded-3xl py-12 sm:py-16 px-6 sm:px-10 text-center">
-      <h2 className="text-sm text-white/50 uppercase tracking-widest mb-10 font-medium">
-        Kontakt
-      </h2>
+        <h1 className="text-4xl font-semibold text-white text-center mb-10">
+            Kontakt
+        </h1>
       <div className="flex flex-col gap-4">
         <a
           href="mailto:michal.kedzia@icloud.com"
