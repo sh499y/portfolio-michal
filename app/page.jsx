@@ -3,6 +3,7 @@ import Bio from "./components/Bio";
 import Skills from "./components/Skills";
 import Produkcje from "./components/Produkcje";
 import Kontakt from "./components/Kontakt";
+import FAQ from "./components/FAQ";
 import Background from "./components/Background";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Bio />
       <Skills />
       <Produkcje />
+      <FAQ />
       <Kontakt />
     </>
   );

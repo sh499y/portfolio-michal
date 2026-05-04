@@ -55,18 +55,18 @@ const produkcje = [
 export default function Produkcje() {
   return (
     <section className="my-16 sm:my-24 glass-card rounded-3xl py-12 sm:py-16 px-6 sm:px-10">
-      <h1 className="text-4xl font-semibold text-white text-center mb-2 uppercase">
+      <h2 className="text-4xl font-semibold text-white text-center mb-2 uppercase">
         Moja działalność
-      </h1>
-      <h2 className="text-2xl text-white/75 uppercase tracking-widest mb-10 text-center font-medium">
-        Moje produkcje
       </h2>
+      <h3 className="text-2xl text-white/75 uppercase tracking-widest mb-10 text-center font-medium">
+        Moje produkcje
+      </h3>
       <div className="flex flex-col gap-10">
         {produkcje.map((grupa) => (
           <div key={grupa.kategoria}>
-            <h3 className="text-xl text-white/85 uppercase tracking-widest mb-4 font-medium">
+            <h4 className="text-xl text-white/85 uppercase tracking-widest mb-4 font-medium">
               {grupa.kategoria}
-            </h3>
+            </h4>
             <div className="divide-y divide-white/10">
               {grupa.items.map((item) => {
                 const thumb = item.thumbnail || getYoutubeThumbnail(item.url);

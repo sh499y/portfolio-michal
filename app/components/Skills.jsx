@@ -18,9 +18,9 @@ export default function Skills() {
   return (
     <section className="my-16 sm:my-24 glass-card rounded-3xl py-12 sm:py-16 px-6 sm:px-10 text-center">
 
-        <h1 className="text-4xl font-semibold text-white text-center uppercase tracking-widest mb-8 ">
+        <h2 className="text-4xl font-semibold text-white text-center uppercase tracking-widest mb-8 ">
             Skills
-        </h1>
+        </h2>
       <ul className="flex flex-wrap justify-center gap-3">
         {skills.map((skill) => (
           <li
