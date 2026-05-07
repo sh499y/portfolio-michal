@@ -30,9 +30,10 @@
   html,
   body {
     @apply min-h-screen;
+    background: #090c0b;
   }
   body {
-    @apply bg-transparent text-foreground;
+    @apply text-foreground;
   }
   html {
     @apply font-sans;

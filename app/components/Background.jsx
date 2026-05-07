@@ -4,7 +4,7 @@ import Grainient from '../../components/Grainient';
 
 export default function Background() {
   return (
-    <div className="fixed inset-0 -z-10 w-full h-full">
+    <div className="fixed inset-0 -z-10" style={{ top: 'calc(-1 * env(safe-area-inset-top, 0px))', bottom: 'calc(-1 * env(safe-area-inset-bottom, 0px))', left: 'calc(-1 * env(safe-area-inset-left, 0px))', right: 'calc(-1 * env(safe-area-inset-right, 0px))' }}>
         <Grainient
             color1="#090c0b"
             color2="#045066"

@@ -8,6 +8,12 @@ const leagueSpartan = League_Spartan({
 
 const SITE_URL = "https://michalkedzia.xyz";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
