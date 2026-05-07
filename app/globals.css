@@ -27,13 +27,13 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html,
-  body {
+  html {
     @apply min-h-screen;
     background: #090c0b;
   }
   body {
-    @apply text-foreground;
+    @apply min-h-screen text-foreground;
+    background: transparent;
   }
   html {
     @apply font-sans;
